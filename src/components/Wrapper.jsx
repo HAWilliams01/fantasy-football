@@ -98,7 +98,12 @@ function Wrapper() {
       </header>
       <main>
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-          Some stuff about your dashboard here.
+          <h3>Todos</h3>
+          <ul>
+            <li>Routing with Next.js</li>
+            <li>Teams API integration</li>
+            <li>Players API integration</li>
+          </ul>
         </div>
       </main>
     </div>
