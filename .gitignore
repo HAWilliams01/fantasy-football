@@ -12,6 +12,8 @@
 /build
 
 # misc
+.next/server
+.next/static
 .DS_Store
 .env.local
 .env.development.local
