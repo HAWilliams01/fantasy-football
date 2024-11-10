@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import {
   Disclosure,
@@ -5,10 +7,12 @@ import {
   DisclosurePanel,
 } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { usePathname } from 'next/navigation';
 
 const navigation = [
-  { name: 'Dashboard', href: '/', current: true },
-  { name: 'Teams', href: '/teams', current: false },
+  { name: 'Dashboard', href: '/' },
+  { name: 'Teams', href: '/teams' },
+  { name: 'Players', href: '/players' },
 ];
 
 function classNames(...classes) {
@@ -16,6 +20,8 @@ function classNames(...classes) {
 }
 
 function Navigation() {
+  const pathname = usePathname();
+
   return (
     <div>
       <Disclosure as="nav" className="bg-gray-800">
@@ -37,7 +43,7 @@ function Navigation() {
                       href={item.href}
                       aria-current={item.current ? 'page' : undefined}
                       className={classNames(
-                        item.current
+                        pathname === item.href
                           ? 'bg-gray-900 text-white'
                           : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                         'rounded-md px-3 py-2 text-sm font-medium'
