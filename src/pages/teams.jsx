@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from 'react-query';
-import Layout from '../components/test-layout';
+import Layout from '../components/layout';
 
 function Teams() {
   const {

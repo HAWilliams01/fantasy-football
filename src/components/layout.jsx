@@ -1,5 +1,5 @@
 import React from 'react';
-import Navigation from './test-navigation';
+import Navigation from './navigation';
 
 function Layout({ children }) {
   return (
