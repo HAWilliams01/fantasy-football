@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
-import Layout from '../components/Layout2';
+import Layout from '../components/Layout';
 
 function Players() {
   const [searchQuery, setSearchQuery] = useState('');
